@@ -1,0 +1,25 @@
+{
+  "name": "dunning_kruger",
+  "version": "0.0.0",
+  "authors": [
+    "travis@mottershead.biz"
+  ],
+  "description": "Test to see how smart people are, vs. how smart they really are.",
+  "main": "index.html",
+  "keywords": [
+    "survey",
+    "test"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "firebase": "~1.0.24"
+  }
+}

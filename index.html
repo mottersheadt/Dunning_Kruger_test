@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="./bower_components/seiyria-bootstrap-slider/css/bootstrap-slider.css" type="text/css" media="all" />
+
+        <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+
+        <script type="text/javascript" src="./bower_components/pythonify/js/pythonify.js"></script>
+        <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./bower_components/firebase/firebase.js"></script>
+        <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="./bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script>
+        
+        <script type="text/javascript" src="./dkTest.js"></script>
+        <script type="text/javascript" src="./js/module.js"></script>
+    </head>
+    <body ng-app="dkTest">
+        <div id="container" class="container">
+            <h1>I Think I Know Test</h1>
+            <div class="lead">Test your understanding of yourself</div>
+
+            <form class="form-vertical col-xs-12" role="form">
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control voffset2" id="first-name"
+                           placeholder="First Name">
+                    <input type="text" class="form-control voffset2" id="last-name"
+                           placeholder="Last Name">
+                    <input type="text" class="form-control voffset2" id="email"
+                           placeholder="eMail">
+                    <input type="number" class="form-control voffset2 col-xs-1" id=""
+                           placeholder="Age">
+                </div>
+                
+                <div class="form-group col-md-12 voffset4">
+                    <label>
+                        What subject of knowledge do you know the most about (preferable a
+                        subject you enjoy/like)?
+                    </label>
+                    <input type="text" class="col-md-3 form-control voffset2" id="first-name"
+                           placeholder="Subject">
+                </div>
+
+                <div class="form-group col-sm-12" ng-controller="assumptions">
+                    <scale>
+                        In General, are you a person that assumes too much or not enough?
+                    </scale>
+                </div>
+                
+                <div class="form-group col-sm-12" ng-controller="threshold">
+                    <scale>
+                        Everyone has a thresho0ld in which they deem the phrase "I know..." or "I
+                        understand..." to be appropriate. Using the scale below where would you say
+                        you would use these phrases?
+                    </scale>
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <slider ng-model="sliders.sliderValue" min="0" max="100" value="0" name="">
+                        Estimate using the scale below how much you don't know about the subject you
+                        know the most about.
+                    </slider>
+                </div>
+
+                <div class="form-group col-sm-12">
+                    <slider ng-model="sliders.sliderValue" min="0" max="100" value="0">
+                        How much, by the time you die do you think you'll know about this subject?
+                    </slider>
+                </div>
+                
+            </form>
+        </div>
+
+    </body>
+</html>
